@@ -1,22 +1,26 @@
 import turtle
 
 
-def color_tree(depth, size):
-    turtle.colormode(255)
-    cg = 255 - int(depth * (250 / 6)) % 255
-    turtle.color(0, cg, 0)
-    if depth == 0:
-        turtle.forward(size)
-    else:
-        turtle.forward(size)
-        turtle.right(45)
-        color_tree(depth - 1, size / 2)
-        turtle.left(90)
-        color_tree(depth - 1, size / 2)
-        turtle.right(45)
-        turtle.backward(size)
+def tree(n, size):
+    if n == 0:
+        return None
+    turtle.fd(size)
+    turtle.rt(45)
+    tree(n - 1, 0.6 * size)
+    turtle.lt(90)
+    tree(n - 1, 0.6 * size)
+    turtle.rt(45)
+    turtle.backward(size)
 
 
-turtle.left(90)
-color_tree(6, 100)
-turtle.done()
+def main():
+    turtle.tracer(0)
+    turtle.left(90)
+    n = int(input('Глубина рекурсии:'))
+    a = int(input('Длина отрезка:'))
+    tree(n, a)
+    turtle.update()
+    turtle.done()
+
+
+main()
