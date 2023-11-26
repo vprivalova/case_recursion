@@ -14,8 +14,9 @@ def koch(order, size):
         koch(order-1, size/3)
 
 
-def main():
+def main_snowflake():
     turtle.up()
+    turtle.speed(10)
     turtle.goto(-100, 0)
     turtle.down()
     n = int(input('Глубина рекурсии:'))
@@ -25,5 +26,5 @@ def main():
         turtle.right(120)
 
 
-main()
-turtle.mainloop()
+if __name__ == '__main__':
+    main_snowflake()

@@ -1,4 +1,12 @@
 import turtle
+import minkovsky_curve
+import square
+import tree
+import branch
+import curve
+import snowflake
+import ice_fractal_1
+import ice_fractal_2
 
 
 def menu():
@@ -14,69 +22,43 @@ def menu():
     Ледяной фрактал 2 - введите 8
     Кривая Леви - введите 9
     Уникальный фрактал - введите 10
+    
+    Для завершения работы введите "END"
     """
     print(hello_script)
-    start = input()
-    if start == '1':
-        squares()
-    elif start == '2':
-        tree()
-    elif start == '3':
-        branch()
-    elif start == '4':
-        koch_curve()
-    elif start == '5':
-        koch_snowflake()
-    elif start == '6':
-        minkovsky_curve()
-    elif start == '7':
-        ice_fractal_1()
-    elif start == '8':
-        ice_fractal_2()
-    elif start == '9':
-        levi_curve()
-    elif start == '10':
-        new_fractal()
-
-
-def squares():
-    pass
-
-
-def tree():
-    pass
-
-
-def branch():
-    pass
-
-
-def koch_curve():
-    pass
-
-
-def koch_snowflake():
-    pass
-
-
-def minkovsky_curve():
-    pass
-
-
-def ice_fractal_1():
-    pass
-
-
-def ice_fractal_2():
-    pass
-
-
-def levi_curve():
-    pass
-
-
-def new_fractal():
-    pass
+    start = input('Ввод: ')
+    turtle.reset()
+    if start == 'END':
+        return None
+    else:
+        if start == '1':
+            square.main_squares()
+            menu()
+        elif start == '2':
+            tree.main_tree()
+            menu()
+        elif start == '3':
+            branch.main_branch()
+            menu()
+        elif start == '4':
+            curve.main_curve()
+            menu()
+        elif start == '5':
+            snowflake.main_snowflake()
+            menu()
+        elif start == '6':
+            minkovsky_curve.main_minkovskycurve()
+            menu()
+        elif start == '7':
+            ice_fractal_1.main_ice1()
+            menu()
+        elif start == '8':
+            ice_fractal_2.main_ice2()
+            menu()
+        elif start == '9':
+            menu()
+        elif start == '10':
+            menu()
 
 
 menu()

@@ -21,8 +21,9 @@ def minkovsky_curve(n, size):
         minkovsky_curve(n - 1, size)
 
 
-def main():
+def main_minkovskycurve():
     turtle.up()
+    turtle.speed(10)
     turtle.goto(-400, 0)
     turtle.down()
     n = int(input('Глубина рекурсии:'))
@@ -30,5 +31,5 @@ def main():
     minkovsky_curve(n, a)
 
 
-main()
-turtle.mainloop()
+if __name__ == '__main__':
+    main_minkovskycurve()

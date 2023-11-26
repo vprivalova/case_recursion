@@ -14,17 +14,15 @@ def ice_fractal_1(n, size):
         ice_fractal_1(n - 1, size / 2)
 
 
-def main():
-    turtle.tracer(0)
+def main_ice1():
     turtle.up()
+    turtle.speed(10)
     turtle.goto(-100, 0)
     turtle.down()
     n = int(input('Глубина рекурсии:'))
     a = int(input('Длина стороны:'))
     ice_fractal_1(n, a)
-    turtle.update()
-    turtle.done()
 
 
-main()
-turtle.mainloop()
+if __name__ == '__main__':
+    main_ice1()

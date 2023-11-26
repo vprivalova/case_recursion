@@ -20,17 +20,16 @@ def branch(n, size):
     turtle.forward(size)
 
 
-def main():
-    turtle.tracer(0)
+def main_branch():
     turtle.up()
+    turtle.speed(10)
     turtle.goto(0, -100)
     turtle.left(90)
     turtle.down()
     n = int(input('Глубина рекурсии:'))
     a = int(input('Длина векти:'))
     branch(n, a)
-    turtle.update()
-    turtle.done()
 
 
-main()
+if __name__ == '__main__':
+    main_branch()
