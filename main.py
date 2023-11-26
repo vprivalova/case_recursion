@@ -7,6 +7,8 @@ import curve
 import snowflake
 import ice_fractal_1
 import ice_fractal_2
+import levi_curve
+import new_fractal
 
 
 def menu():
@@ -56,8 +58,10 @@ def menu():
             ice_fractal_2.main_ice2()
             menu()
         elif start == '9':
+            levi_curve.main_levicurve()
             menu()
         elif start == '10':
+            new_fractal.main_newfractal()
             menu()
 
 
