@@ -6,7 +6,7 @@ def levi(order, size):
         turtle.forward(size)
     else:
         turtle.left(45)
-        levi(order-1, size/2)
+        levi(order - 1, size/2)
         turtle.right(90)
         levi(order - 1, size/2)
         turtle.left(45)

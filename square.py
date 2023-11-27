@@ -8,9 +8,9 @@ def squares(order, size):
         for i in range(4):
             turtle.forward(size)
             turtle.right(90)
-        turtle.forward(size*0.05)
+        turtle.forward(size * 0.05)
         turtle.right(10)
-        squares(order-1, size - 5)
+        squares(order - 1, size - 5)
 
 
 def main_squares():

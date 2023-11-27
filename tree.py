@@ -1,24 +1,30 @@
 import turtle
 
 
-def tree(n, size):
+def tree(n, size, angle):
     if n == 0:
         return None
-    turtle.fd(size)
-    turtle.rt(45)
-    tree(n - 1, 0.6 * size)
-    turtle.lt(90)
-    tree(n - 1, 0.6 * size)
-    turtle.rt(45)
+    turtle.forward(size)
+    turtle.right(angle)
+    tree(n-1, 0.6 * size, angle)
+    turtle.left(angle)
+    tree(n-1, 0.6 * size, angle)
+    turtle.left(angle)
+    tree(n-1, 0.6 * size, angle)
+    turtle.right(angle)
+    tree(n-1, 0.6 * size, angle)
     turtle.backward(size)
 
 
 def main_tree():
-    turtle.speed(10)
+    turtle.tracer(0)
     turtle.left(90)
     n = int(input('Глубина рекурсии:'))
     a = int(input('Длина отрезка:'))
-    tree(n, a)
+    ang = int(input('Угол между ветками:'))
+    tree(n, a, ang)
+    turtle.update()
+    turtle.done()
 
 
 if __name__ == '__main__':
