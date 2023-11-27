@@ -18,7 +18,6 @@ def tree(n, size, angle):
 
 
 def main_tree():
-    turtle.tracer(0)
     turtle.left(90)
     n = int(input('Глубина рекурсии:'))
     a = int(input('Длина отрезка:'))
@@ -40,8 +39,6 @@ def main_tree():
     color_name1 = available_colors_eng.setdefault(color_name1)
     turtle.pencolor(color_name1)
     tree(n, a, ang)
-    turtle.update()
-    turtle.done()
 
 
 if __name__ == '__main__':
