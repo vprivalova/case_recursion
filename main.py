@@ -1,3 +1,9 @@
+"""
+Team:
+Nizovtseva Anastasia 94
+Privalova Viktoria 85
+"""
+
 import turtle
 import minkovsky_curve
 import square
