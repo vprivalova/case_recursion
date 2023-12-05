@@ -11,7 +11,7 @@ def squares(order, size):
             turtle.right(90)
         turtle.forward(size * 0.05)
         turtle.right(10)
-        squares(order - 1, size - 5)
+        squares(order - 1, size * 0.9)
 
 
 def main_squares():
